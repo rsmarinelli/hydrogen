@@ -1,5 +1,6 @@
 # Hydrogen Mock-Up API
 Author: Ryan Marinelli
+
 Date: December 2020
 
 ## Requirements 
@@ -111,5 +112,5 @@ Example of a single `/cards` record:
 ```
 
 ## Data Design Diagram
-![alt text](data_design_diagram.png "Title")
+![alt text](data_design_diagram.PNG)
 
