@@ -4,32 +4,29 @@ Author: Ryan Marinelli
 Date: December 2020
 
 ## Requirements 
-Make a mock ‘GET Transactions’ REST API endpoint to pull transactions for a payroll debit card used by a company. Show the request and response with all of the fields.
-- Market Research 
-- Data File
-- REST API
-- Documentation
+Make a mock ‘GET /transactions’ REST API endpoint to pull transactions for a payroll debit card used by a company. Show the request and response with all of the fields.
 
-## Payroll Debit Card Information
-What is a payroll debit card? 
-	- A secure, convenient and reloadable debit card, issued by an employer, with the primary purpose for employees to directly receive their wages and other compensation each pay period. 
-	
-What are the key payroll card features – Employer Perspective? 
-	- Offer employers a direct payment option for employees to access their paycheck or benefits. 
-	- Streamlines the employer payroll process by reducing the reliance on paper paychecks, setting up direct deposits, or needing employees to visit the workplace to pick up their paycheck.
-	
-What are the key payroll card features – Employee Perspective?
-	- Reliable Wage Payment: Automatically receive your paycheck directly on the card each pay period. Reduces the employees need to go to the office to collect their paycheck, cash their paycheck at a check casher, or wait for the funds to clear with a bank. Funds are available right away on the debit card. 
-	- Unbank: Employee does not need to have a bank account. An employee can get direct access to their funds. 
-	- Card Usability: Cards can be used to make purchases (in person, online) or to withdraw money from an ATM. Some cards can be used to pay bills directly. 
-	- Security: Cards offer fraud protection if lost or stolen, reducing the need for the employee to carry large sums of cash.  
-	- Privacy: Only the Card Issuer (Visa, Mastercard, etc.) and not the cardholder’s employer can track what the employee spends. Typically, the financial institution that issues the payroll card establishes a separate electronic subaccount for each employee. Once wages are deposited into the account, the employer loses access to the funds and has no ability to view transactions conducted by the cardholder. 
-		
-Key User Types:
-	- Unbanked employee: Employee who does not have a bank account. Employee would typically use a cash checking service
-	- Seasonal employee: Employee who may only work for a temporary period. Reduces the overhead for the employer to setup direct deposit
-	- Employee accessing Federal Benefits: Employee who obtains federal benefits such as medical leave or transit discount
 
+## Installation
+
+To run the REST API locally, follow these steps:
+
+1. Download the zip of the repo or clone the repository locally
+2. Unzip if necessary, and note the location of the **hydrogen** folder
+3. Verify / install the following python packages (on their latest version). Use `pip install <package>` to add the package to your Anaconda Environment:
+- pandas
+- flask 
+- flask_restful 
+- requests
+- ipywidgets
+
+4. Open the Anaconda Prompt and enter the following to activate the Flask API app:
+```
+cd "<path to downloaded folder containing \hydrogren>"
+python api.py
+```
+5. Once the local Flask Server is activated, copy and paste the "running on" URL into a web browser to access endpoints.
+6. For a demo, launch `Jupyter Notebook` in the Anaconda Prompt and navigate to the `Payroll Transaction API Demo.ipynb` file. This Notebook will walk through how to make a `GET /transactions` request. 
 
 # REST API 
 **Endpoints:**
@@ -113,4 +110,24 @@ Example of a single `/cards` record:
 
 ## Data Design Diagram
 ![alt text](data_design_diagram.PNG)
+
+## Payroll Debit Card Research
+What is a payroll debit card? 
+- A secure, convenient and reloadable debit card, issued by an employer, with the primary purpose for employees to directly receive their wages and other compensation each pay period. 
+	
+What are the key payroll card features – Employer Perspective? 
+- Offer employers a direct payment option for employees to access their paycheck or benefits. 
+- Streamlines the employer payroll process by reducing the reliance on paper paychecks, setting up direct deposits, or needing employees to visit the workplace to pick up their paycheck.
+	
+What are the key payroll card features – Employee Perspective?
+- Reliable Wage Payment: Automatically receive your paycheck directly on the card each pay period. Reduces the employees need to go to the office to collect their paycheck, cash their paycheck at a check casher, or wait for the funds to clear with a bank. Funds are available right away on the debit card. 
+- Unbank: Employee does not need to have a bank account. An employee can get direct access to their funds. 
+- Card Usability: Cards can be used to make purchases (in person, online) or to withdraw money from an ATM. Some cards can be used to pay bills directly. 
+- Security: Cards offer fraud protection if lost or stolen, reducing the need for the employee to carry large sums of cash.  
+- Privacy: Only the Card Issuer (Visa, Mastercard, etc.) and not the cardholder’s employer can track what the employee spends. Typically, the financial institution that issues the payroll card establishes a separate electronic subaccount for each employee. Once wages are deposited into the account, the employer loses access to the funds and has no ability to view transactions conducted by the cardholder. 
+		
+Key User Types:
+- Unbanked employee: Employee who does not have a bank account. Employee would typically use a cash checking service
+- Seasonal employee: Employee who may only work for a temporary period. Reduces the overhead for the employer to setup direct deposit
+- Employee accessing Federal Benefits: Employee who obtains federal benefits such as medical leave or transit discount
 
